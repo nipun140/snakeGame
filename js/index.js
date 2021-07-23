@@ -128,28 +128,22 @@ window.requestAnimationFrame(main);
 //window event listner for key presses
 window.addEventListener("keydown", (event) => {
   // inputDir = { x: 0, y: -1 }; //game start on any key press (move down)
+  moveSound.play();
+  musicSound.play();
   switch (event.key) {
     case "ArrowUp":
-      moveSound.play();
-      musicSound.play();
       inputDir.x = 0;
       inputDir.y = -1;
       break;
     case "ArrowLeft":
-      moveSound.play();
-      musicSound.play();
       inputDir.x = -1;
       inputDir.y = 0;
       break;
     case "ArrowRight":
-      moveSound.play();
-      musicSound.play();
       inputDir.x = 1;
       inputDir.y = 0;
       break;
     case "ArrowDown":
-      moveSound.play();
-      musicSound.play();
       inputDir.x = 0;
       inputDir.y = 1;
       break;
@@ -162,33 +156,26 @@ window.addEventListener("keydown", (event) => {
 document.querySelectorAll(".control-btn").forEach((btn) => {
   btn.addEventListener("click", (event) => {
     let clickedKey = event.currentTarget.value;
-
+    moveSound.play();
+    musicSound.play();
     switch (clickedKey) {
       case "ArrowUp":
         console.log("ArrowUp");
-        moveSound.play();
-        musicSound.play();
         inputDir.x = 0;
         inputDir.y = -1;
         break;
       case "ArrowLeft":
         console.log("ArrowLeft");
-        moveSound.play();
-        musicSound.play();
         inputDir.x = -1;
         inputDir.y = 0;
         break;
       case "ArrowRight":
         console.log("ArrowRight");
-        moveSound.play();
-        musicSound.play();
         inputDir.x = 1;
         inputDir.y = 0;
         break;
       case "ArrowDown":
         console.log("ArrowDown");
-        moveSound.play();
-        musicSound.play();
         inputDir.x = 0;
         inputDir.y = 1;
         break;
