@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+
+<body>
+    <div class="body">
+        <header>
+            <h1 class="title">Snake Game</h1>
+            <div class="score-box">
+                <p class="score-text">Score:</p>
+                <span id='current-score' class="score-val">0</span>
+                <div class="line"></div>
+                <p class="score-text">High-Score:</p>
+                <span id='hi-score' class="score-val">0</span>
+            </div>
+        </header>
+        <div class="board"></div>
+        <div class="control-btns">
+            <button type="button" value="ArrowLeft" class="control-btn btn-left"><span
+                    class="fas fa-caret-left"></span></button>
+            <button type="button" value="ArrowUp" class="control-btn btn-up"><span
+                    class="fas fa-caret-up"></span></button>
+            <button type="button" value="ArrowDown" class="control-btn btn-down"><span
+                    class="fas fa-caret-down"></span></button>
+            <button type="button" value="ArrowRight" class="control-btn btn-right"><span
+                    class="fas fa-caret-right"></span></button>
+        </div>
+        <div class="info">Press any arrow key to start the game</div>
+    </div>
+</body>
+<script src="/js/index.js"></script>
+
+</html>

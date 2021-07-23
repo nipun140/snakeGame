@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Tourney&display=swap");
+html {
+  font-size: 10px;
+  font-family: "Tourney", cursive;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  min-height: 100vh;
+  max-width: 100vw;
+  background: url("../img/bg.jpg");
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+  color: #32ff7e;
+  text-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.7);
+}
+
+.score-box {
+  border-radius: 0.5rem;
+  background: #32ff7e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.score-box .score-text {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.score-box .score-val {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.score-box .line {
+  background: black;
+  width: 0.2rem;
+  height: 2rem;
+  margin: 0 0.5rem;
+}
+
+.board {
+  height: 35vw;
+  width: 35vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9cee9c), to(yellow));
+  background: linear-gradient(#9cee9c, yellow);
+  border-radius: 0.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[18];
+      grid-template-columns: repeat(18, 1fr);
+  -ms-grid-rows: (1fr)[18];
+      grid-template-rows: repeat(18, 1fr);
+  -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.head {
+  background: -webkit-gradient(linear, left top, left bottom, from(red), to(yellow));
+  background: linear-gradient(red, yellow);
+  border: 0.15rem solid black;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.snake {
+  background-color: purple;
+  border: 0.1rem solid white;
+  border-radius: 50%;
+}
+
+.food {
+  background: -webkit-gradient(linear, left top, left bottom, from(#576574), to(#c8d6e5));
+  background: linear-gradient(#576574, #c8d6e5);
+  border: 0.1rem solid black;
+  border-radius: 50%;
+}
+
+.info {
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.btn-left {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: btn-left;
+}
+
+.btn-up {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: btn-up;
+}
+
+.btn-down {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: btn-down;
+}
+
+.btn-right {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: btn-right;
+}
+
+.control-btns {
+  display: none;
+  grid-gap: 0.75rem;
+  margin: 0.5rem 0;
+      grid-template-areas: ". btn-up ." "btn-left btn-up btn-right" "btn-left btn-down btn-right" ". btn-down .";
+}
+
+.control-btns button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  background: #f64646;
+  background: -webkit-gradient(linear, left top, right top, from(#f64646), to(#e5f751));
+  background: linear-gradient(90deg, #f64646 0%, #e5f751 100%);
+}
+
+@media (max-width: 900px) {
+  .board {
+    height: 45vw;
+    width: 45vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .board {
+    height: 55vw;
+    width: 55vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .body {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .board {
+    height: 75vw;
+    width: 75vw;
+  }
+  .control-btns {
+    display: -ms-grid;
+    display: grid;
+  }
+  html {
+    font-size: 9px;
+  }
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .title {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 300px) {
+  html {
+    font-size: 8px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
