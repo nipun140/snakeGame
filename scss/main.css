@@ -53,7 +53,7 @@ header {
 
 .title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   margin-right: 0.5rem;
@@ -76,7 +76,7 @@ header {
 }
 
 .score-box .score-text {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -85,7 +85,7 @@ header {
 .score-box .score-val {
   margin-left: 0.5rem;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .score-box .line {
